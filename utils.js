@@ -132,16 +132,6 @@ void main() {
 
 `
 
-/**
- * @WARNING DO NOT CHANGE ANYTHING ABOVE THIS LINE
- */
-
-
-
-/**
- * 
- * @TASK1 Calculate the model view matrix by using the chatGPT
- */
 
 function getChatGPTModelViewMatrix() {
     const transformationMatrix = new Float32Array([
@@ -157,16 +147,9 @@ function getChatGPTModelViewMatrix() {
 }
 
 
-/**
- * 
- * @TASK2 Calculate the model view matrix by using the given 
- * transformation methods and required transformation parameters
- * stated in transformation-prompt.txt
- */
+
 function getModelViewMatrix() {
-    // calculate the model view matrix by using the transformation
-    // methods and return the modelView matrix in this method
-    
+
     const scalingMatrix = createScaleMatrix(0.5, 0.5, 1);
 
     
@@ -185,20 +168,12 @@ function getModelViewMatrix() {
     return new Float32Array(total_Matrix);
 
 }
-/**
- * 
- * @TASK3 Ask CHAT-GPT to animate the transformation calculated in 
- * task2 infinitely with a period of 10 seconds. 
- * First 5 seconds, the cube should transform from its initial 
- * position to the target position.
- * The next 5 seconds, the cube should return to its initial position.
- */
+
 
 
 
 function getPeriodicMovement(startTime) {
-    // this metdo should return the model view matrix at the given time
-    // to get a smooth animation
+
     
     const elapsed = (Date.now() - startTime) % 10000;
     const t = (elapsed <= 10000 / 2) ? (elapsed / (10000 / 2)) : (1 - (elapsed - 10000 / 2) / (10000 / 2));
