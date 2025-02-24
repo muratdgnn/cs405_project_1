@@ -1,6 +1,6 @@
 <head>
     <title>CS405 - Week3 WebGL Intro</title>
-    <!-- References or links to HTML, JavaScript, and WebGL standards -->
+    
     <meta name="HTML" content="https://www.w3.org/TR/html/">
     <meta name="JavaScript" content="https://www.ecma-international.org/ecma-262/">
     <meta name="WebGL" content="https://www.khronos.org/webgl/">
@@ -105,28 +105,14 @@
         const startTime = Date.now();
         let modelViewMatrix = createIdentityMatrix();
         function render() {
-            // Clear the canvas
+           
             gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-            /**
-            *@WARNING
-            DO NOT CHANGE ANYTHING ABOVE THIS LINE
-            */
-
-            /** @task1 */
             modelViewMatrix = getChatGPTModelViewMatrix();
 
-            /** @task2 */
             modelViewMatrix = getModelViewMatrix();
 
-            /** @task3 */
             modelViewMatrix = getPeriodicMovement(startTime);
-
-
-            /**
-             * @WARNING
-             * DO NOT CHANGE ANYTHING BELOW THIS LINE
-            */
 
             // Pass the model-view and projection matrices to the shader
             gl.uniformMatrix4fv(modelViewMatrixLocation, false, modelViewMatrix);
