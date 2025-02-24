@@ -1,9 +1,4 @@
-/**
- * @VERTEX_FORMAT {x, y, z, nx, ny, nz}
- * @VERTEX_COORDINATES = [x, y, z]
- * @VERTEX_NORMALS = [nx, ny, nz]
- * @WARNING DO NOT CHANGE THIS FILE
- */
+
 const cubeVertices = new Float32Array([
     // Front face
     -0.5, -0.5, 0.5,  0,  0,  1,
